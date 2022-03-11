@@ -1,77 +1,27 @@
+function Story(props) {
+    return (
+        <div class="story">
+            <div class="imagem">
+                <img src={props.imagem} alt={props.imagem} />
+            </div>
+            <div class="usuario">
+                {props.usuario}
+            </div>
+        </div>
+    )
+}
+
 function Stories() {
     return (
         <div class="stories">
-            <div class="story">
-                <div class="imagem">
-                    <img src="assets/img/9gag.svg" />
-                </div>
-                <div class="usuario">
-                    9gag
-                </div>
-            </div>
-
-            <div class="story">
-                <div class="imagem">
-                    <img src="assets/img/meowed.svg" />
-                </div>
-                <div class="usuario">
-                    meowed
-                </div>
-            </div>
-
-            <div class="story">
-                <div class="imagem">
-                    <img src="assets/img/barked.svg" />
-                </div>
-                <div class="usuario">
-                    barked
-                </div>
-            </div>
-
-            <div class="story">
-                <div class="imagem">
-                    <img src="assets/img/nathanwpylestrangeplanet.svg" />
-                </div>
-                <div class="usuario">
-                    nathanwpylestrangeplanet
-                </div>
-            </div>
-
-            <div class="story">
-                <div class="imagem">
-                    <img src="assets/img/wawawicomics.svg" />
-                </div>
-                <div class="usuario">
-                    wawawicomics
-                </div>
-            </div>
-
-            <div class="story">
-                <div class="imagem">
-                    <img src="assets/img/respondeai.svg" />
-                </div>
-                <div class="usuario">
-                    respondeai
-                </div>
-            </div>
-
-            <div class="story">
-                <div class="imagem">
-                    <img src="assets/img/filomoderna.svg" />
-                </div>
-                <div class="usuario">
-                    filomoderna
-                </div>
-            </div>
-
-            <div class="story">
-                <div class="imagem">
-                    <img src="assets/img/memeriagourmet.svg" />
-                </div>
-                <div class="usuario">
-                    memeriagourmet
-                </div>
-            </div>
+            <Story imagem="assets/img/9gag.svg" usuario="9gag" />
+            <Story imagem="assets/img/meowed.svg" usuario="meowed" />
+            <Story imagem="assets/img/barked.svg" usuario="barked" />
+            <Story imagem="assets/img/nathanwpylestrangeplanet.svg" usuario="nathanwpylestrangeplanet" />
+            <Story imagem="assets/img/wawawicomics.svg" usuario="wawawicomics" />
+            <Story imagem="assets/img/respondeai.svg" usuario="respondeai" />
+            <Story imagem="assets/img/filomoderna.svg" usuario="filomoderna" />
+            <Story imagem="assets/img/memeriagourmet.svg" usuario="memeriagourmet" />
 
             <div class="setinha">
                 <ion-icon name="chevron-forward-circle"></ion-icon>
@@ -80,80 +30,51 @@ function Stories() {
     )
 }
 
+function Post(props) {
+    return (
+        <div class="post">
+            <div class="topo">
+                <div class="usuario">
+                    <img src={props.imagem} alt={props.imagem} />
+                    {props.usuario}
+                </div>
+                <div class="acoes">
+                    <ion-icon name="ellipsis-horizontal"></ion-icon>
+                </div>
+            </div>
+
+            <div class="conteudo">
+                <img src={props.imgPostagem} alt={props.imgPostagem} />
+            </div>
+
+            <div class="fundo">
+                <div class="acoes">
+                    <div>
+                        <ion-icon name="heart-outline"></ion-icon>
+                        <ion-icon name="chatbubble-outline"></ion-icon>
+                        <ion-icon name="paper-plane-outline"></ion-icon>
+                    </div>
+                    <div>
+                        <ion-icon name="bookmark-outline"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="curtidas">
+                    <img src={props.imgPrincipalCurtida} alt={props.imgPrincipalCurtida} />
+                    <div class="texto">
+                        Curtido por <strong>{props.userCurtidaPrincipal}</strong> e <strong>{props.infosNumCurtidas}</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}
+
 function Posts() {
     return (
         <div class="posts">
-            <div class="post">
-                <div class="topo">
-                    <div class="usuario">
-                        <img src="assets/img/meowed.svg" />
-                        meowed
-                    </div>
-                    <div class="acoes">
-                        <ion-icon name="ellipsis-horizontal"></ion-icon>
-                    </div>
-                </div>
-
-                <div class="conteudo">
-                    <img src="assets/img/gato-telefone.svg" />
-                </div>
-
-                <div class="fundo">
-                    <div class="acoes">
-                        <div>
-                            <ion-icon name="heart-outline"></ion-icon>
-                            <ion-icon name="chatbubble-outline"></ion-icon>
-                            <ion-icon name="paper-plane-outline"></ion-icon>
-                        </div>
-                        <div>
-                            <ion-icon name="bookmark-outline"></ion-icon>
-                        </div>
-                    </div>
-
-                    <div class="curtidas">
-                        <img src="assets/img/respondeai.svg" />
-                        <div class="texto">
-                            Curtido por <strong>respondeai</strong> e <strong>outras 101.523 pessoas</strong>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="post">
-                <div class="topo">
-                    <div class="usuario">
-                        <img src="assets/img/barked.svg" />
-                        barked
-                    </div>
-                    <div class="acoes">
-                        <ion-icon name="ellipsis-horizontal"></ion-icon>
-                    </div>
-                </div>
-
-                <div class="conteudo">
-                    <img src="assets/img/dog.svg" />
-                </div>
-
-                <div class="fundo">
-                    <div class="acoes">
-                        <div>
-                            <ion-icon name="heart-outline"></ion-icon>
-                            <ion-icon name="chatbubble-outline"></ion-icon>
-                            <ion-icon name="paper-plane-outline"></ion-icon>
-                        </div>
-                        <div>
-                            <ion-icon name="bookmark-outline"></ion-icon>
-                        </div>
-                    </div>
-
-                    <div class="curtidas">
-                        <img src="assets/img/adorable_animals.svg" />
-                        <div class="texto">
-                            Curtido por <strong>adorable_animals</strong> e <strong>outras 99.159 pessoas</strong>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <Post imagem="assets/img/meowed.svg" usuario="meowed" imgPostagem="assets/img/gato-telefone.svg" imgPrincipalCurtida="assets/img/respondeai.svg" userCurtidaPrincipal="respondeai" infosNumCurtidas="outras 101.523 pessoas" />
+            <Post imagem="assets/img/barked.svg" usuario="barked" imgPostagem="assets/img/dog.svg" imgPrincipalCurtida="assets/img/adorable_animals.svg" userCurtidaPrincipal="adorable_animals" infosNumCurtidas="outras 99.159 pessoas" />
         </div>
     )
 }
@@ -179,6 +100,22 @@ function Usuario() {
     )
 }
 
+function Sugestao(props) {
+    return (
+        <div class="sugestao">
+            <div class="usuario">
+                <img src={props.imagemUsuarioSugerido} alt={props.imagemUsuarioSugerido}/>
+                <div class="texto">
+                    <div class="nome">{props.nomeUsuarioSugerido}</div>
+                    <div class="razao">Segue você</div>
+                </div>
+            </div>
+
+            <div class="seguir">Seguir</div>
+        </div>
+    )
+}
+
 function Sugestoes() {
     return (
         <div class="sugestoes">
@@ -186,66 +123,11 @@ function Sugestoes() {
                 Sugestões para você
                 <div>Ver tudo</div>
             </div>
-
-            <div class="sugestao">
-                <div class="usuario">
-                    <img src="assets/img/bad.vibes.memes.svg" />
-                    <div class="texto">
-                        <div class="nome">bad.vibes.memes</div>
-                        <div class="razao">Segue você</div>
-                    </div>
-                </div>
-
-                <div class="seguir">Seguir</div>
-            </div>
-
-            <div class="sugestao">
-                <div class="usuario">
-                    <img src="assets/img/chibirdart.svg" />
-                    <div class="texto">
-                        <div class="nome">chibirdart</div>
-                        <div class="razao">Segue você</div>
-                    </div>
-                </div>
-
-                <div class="seguir">Seguir</div>
-            </div>
-
-            <div class="sugestao">
-                <div class="usuario">
-                    <img src="assets/img/razoesparaacreditar.svg" />
-                    <div class="texto">
-                        <div class="nome">razoesparaacreditar</div>
-                        <div class="razao">Novo no Instagram</div>
-                    </div>
-                </div>
-
-                <div class="seguir">Seguir</div>
-            </div>
-
-            <div class="sugestao">
-                <div class="usuario">
-                    <img src="assets/img/adorable_animals.svg" />
-                    <div class="texto">
-                        <div class="nome">adorable_animals</div>
-                        <div class="razao">Segue você</div>
-                    </div>
-                </div>
-
-                <div class="seguir">Seguir</div>
-            </div>
-
-            <div class="sugestao">
-                <div class="usuario">
-                    <img src="assets/img/smallcutecats.svg" />
-                    <div class="texto">
-                        <div class="nome">smallcutecats</div>
-                        <div class="razao">Segue você</div>
-                    </div>
-                </div>
-
-                <div class="seguir">Seguir</div>
-            </div>
+            <Sugestao imagemUsuarioSugerido="assets/img/bad.vibes.memes.svg" nomeUsuarioSugerido="bad.vibes.memes"/>
+            <Sugestao imagemUsuarioSugerido="assets/img/chibirdart.svg" nomeUsuarioSugerido="chibirdart"/>
+            <Sugestao imagemUsuarioSugerido="assets/img/razoesparaacreditar.svg" nomeUsuarioSugerido="razoesparaacreditar"/>
+            <Sugestao imagemUsuarioSugerido="assets/img/adorable_animals.svg" nomeUsuarioSugerido="adorable_animals"/>
+            <Sugestao imagemUsuarioSugerido="assets/img/smallcutecats.svg" nomeUsuarioSugerido="smallcutecats"/>
         </div>
     )
 }
@@ -271,7 +153,7 @@ export default function Corpo() {
     return (
         <div class="corpo">
             <CorpoEsquerda />
-            <Sidebar/>
+            <Sidebar />
         </div>
     )
 }
